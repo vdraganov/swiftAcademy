@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jQuery Click Demo</title>
+    <link rel="stylesheet" type="text/css">
+    <script src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        var clicksCount = 0;
+		$(document).ready(function(){
+			// count number of clicks
+			$('#btn-click').on('click', function(){
+                clicksCount++;
+                updateCount(clicksCount);
+            });
+
+            function updateCount(count) {
+                $('#counter > span').text(count)
+            }
+		});
+	</script>
+</head>
+<body>
+    <button id="btn-click">Click</button>
+	<p id="counter">Total counts:<span>0</span></p>
+</body>
+</html>

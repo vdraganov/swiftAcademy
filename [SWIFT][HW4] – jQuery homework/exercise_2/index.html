@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exercise 1</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    </head>
+    <style media="screen">
+        #page-container {
+            display: flex;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            right: 100px;
+            bottom: 100px;
+            background-color: rgba(209, 196, 233, 1);
+        }
+
+        #page-container > button {
+            display: flex;
+            align-self: center;
+            margin: auto;
+            background-color: rgba(81, 45, 168, 0.7);
+            padding: 10px;
+            border-radius: 50%;
+        }
+    </style>
+    <script type="text/javascript">
+    $(function() {
+        $('button').hover(
+          function() {
+            $(this).find('img').animate({
+                width: '65px',
+            }, 300);
+
+          }, function() {
+              $(this).find('img').animate({
+                  width: '48px',
+              }, 300);
+          }
+        )
+
+        $('button').click(
+          function() {
+            $(this).stop().animate({ backgroundColor: "red" }, 500);
+          }, function() {
+
+          }
+        )
+    });
+    </script>
+    <body>
+        <div id="page-container" class="">
+            <button type="button" name="button"><img src="./assets/Watch-list_default.png" alt="watch" /></button>
+        </div>
+    </body>
+</html>
