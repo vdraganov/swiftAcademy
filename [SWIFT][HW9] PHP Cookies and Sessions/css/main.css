@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    user-select: none;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+header {
+    height: 50px;
+    width: 100vw;
+    background-color: var(--oc-gray-8);
+}
+
+#main-background {
+    background: url(https://source.unsplash.com/collection/470358) center no-repeat;
+    background-size: cover;
+    -webkit-filter: blur(5px) grayscale(100%);
+    -moz-filter: blur(5px) grayscale(100%);
+    -o-filter: blur(5px) grayscale(100%);
+    -ms-filter: blur(5px) grayscale(100%);
+    filter: blur(5px) grayscale(100%);
+    position:absolute;
+    top: -50px;
+    right: -50px;
+    bottom: -50px;
+    left: -50px;
+    z-index: -1;
+}
+
+#main-container {
+    position:absolute;
+    top: 100px;
+    right: 50px;
+    bottom: 50px;
+    left: 50px;
+    background-color: rgba(52, 58, 64, 0.75);
+}
+
+.row-orientation {
+    display: flex;
+    flex-direction: row;
+}
+
+.column-orientation {
+    display: flex;
+    flex-direction: column;
+}
+
+ul, ul > li {
+    color: var(--oc-white);
+    display: inline-block;
+    padding: 0 10px;
+    height: 100%;
+    line-height: 50px;
+}
+
+ul:last-child {
+    float: right;
+}
+
+ul:last-child::after {
+    clear: both;
+}
+
+li:hover {
+    color: var(--oc-black);
+    background-color: var(--oc-green-6);
+    cursor: pointer;
+}
